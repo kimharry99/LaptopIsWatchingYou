@@ -1,5 +1,5 @@
 package private_Project;
 
-public class AddingUi {
+public class AddingUi extends SuperUi{
 
 }

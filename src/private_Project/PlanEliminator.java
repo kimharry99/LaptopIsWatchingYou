@@ -1,5 +1,5 @@
 package private_Project;
 
-public class PlanEliminator {
+public class PlanEliminator extends PlanManager {
 
 }

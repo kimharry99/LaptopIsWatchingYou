@@ -1,5 +1,5 @@
 package private_Project;
 
-public class PlanModifier {
+public class PlanModifier extends PlanManager{
 
 }
