@@ -28,7 +28,7 @@ public class SuperUi extends JFrame{
 		bt.addActionListener(new ButtonActionListener());
 		return bt;
 	}
-	class ButtonActionListener implements ActionListener {	//모든 버튼에 대한 액션리스너
+	/*class ButtonActionListener implements ActionListener {	//모든 버튼에 대한 액션리스너
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -55,5 +55,5 @@ public class SuperUi extends JFrame{
 			}
 		}
 		
-	}
+	}*/
 }
