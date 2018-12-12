@@ -51,7 +51,6 @@ public class SuperUi extends JFrame{
 				new ModifieUi();
 				break;
 			case "삭제" :
-				setEnabled(false);
 				break;
 			}
 		}
