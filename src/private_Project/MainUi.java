@@ -14,6 +14,9 @@ public class MainUi extends SuperUi {
 		getContentPane().add(execution);
 		getContentPane().add(modifie);
 	}
-
+	
+	public static void main(String[] args) {
+		new MainUi();
+	}
 
 }

@@ -51,13 +51,10 @@ public class SuperUi extends JFrame{
 				new ModifieUi();
 				break;
 			case "삭제" :
+				setEnabled(false);
 				break;
 			}
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-		new MainUi();
 	}
 }
