@@ -1,7 +1,7 @@
-package private_Project;
+package ui;
 
 public class ModifieUi extends SuperUi{
-	ModifieUi(){
+	public ModifieUi(){
 		super();
 		setTitle("ModifieUi");
 	}

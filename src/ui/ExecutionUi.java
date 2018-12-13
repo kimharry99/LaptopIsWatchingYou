@@ -1,7 +1,7 @@
-package private_Project;
+package ui;
 
 public class ExecutionUi extends SuperUi{
-	ExecutionUi(){
+	public ExecutionUi(){
 		super();
 		setTitle("ExecutionUi");
 	}

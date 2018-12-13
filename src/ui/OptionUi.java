@@ -1,8 +1,11 @@
-package private_Project;
+package ui;
 
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
+
+import planAndFileManagement.PlanLoader;
+
 import java.awt.event.*;
 
 public class OptionUi extends SuperUi {
@@ -11,9 +14,17 @@ public class OptionUi extends SuperUi {
 	JButton modifing = this.makeButton("수정", 100, 40, 1000, 150);
 	JButton eliminating = this.makeButton("삭제", 100, 40, 1000, 200);
 	
-	OptionUi() {
+	JButton alarmMethod = this.makeButton("알람 방법", 100, 40, 1000, 300);
+	
+	public OptionUi() {
 		super();
 		setTitle("Option");
+		
+		JLabel label = new JLabel("계획 목록");
+		label.setFont(new Font("Serif", Font.BOLD, 30));
+		label.setLocation(100, 50);
+		label.setSize(700,50);
+		getContentPane().add(label);
 		
 		JList<String> planList = new JList<String>(planNames); // 계획이름 JList 생성
 		planList.setFont(new Font("Serif", Font.PLAIN, 30));
@@ -22,8 +33,8 @@ public class OptionUi extends SuperUi {
 		
 
 		JScrollPane scrollPane = new JScrollPane(planList);
-		scrollPane.setLocation(100, 50);
-		scrollPane.setSize(700, 500);
+		scrollPane.setLocation(100, 100);
+		scrollPane.setSize(700, 450);
 		
 		getContentPane().add(scrollPane);
 		
@@ -34,6 +45,8 @@ public class OptionUi extends SuperUi {
 		eliminating.setEnabled(false);
 		
 		getContentPane().add(eliminating);
+		
+		getContentPane().add(alarmMethod);
 	}
 	
 	class PlanListSelection implements ListSelectionListener{
