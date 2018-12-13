@@ -10,16 +10,17 @@ import java.awt.event.*;
 
 public class SuperUi extends JFrame{
 	JButton[] buttonArray = new JButton[20];
+	JButton btClose;
 	public SuperUi() {
 		setTitle("Ui");
 		Container c = getContentPane();
 		c.setLayout(null);
 		//UI기본 설정들 (layout null)
 		
-		setSize(1250,640);
+		setSize(1280,640);
 		setVisible(true);
 		
-		JButton btClose = this.makeButton("닫기", 100, 40, 1000, 500);//창을 닫는 닫기 버튼 출력
+		btClose = this.makeButton("닫기", 100, 40, 1000, 500);//창을 닫는 닫기 버튼 출력
 		
 		c.add(btClose);
 

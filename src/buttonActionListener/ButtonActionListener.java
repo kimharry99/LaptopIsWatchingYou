@@ -3,10 +3,10 @@ package buttonActionListener;
 import javax.swing.*;
 
 import planAndFileManagement.PlanEliminator;
-import ui.AddingUi;
 import ui.ExecutionUi;
 import ui.ModifieUi;
 import ui.OptionUi;
+import ui.PlanAddingUi;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -44,36 +44,6 @@ public class ButtonActionListener implements ActionListener {	//모든 버튼에
 			System.out.println("ExecutionUi 출력");
 			break;
 		
-		//OptionUi의 추가 버튼 
-		case "추가":
-			new AddingUi();
-			System.out.println("AddingUi 출력");
-			break;
-			
-		//OptionUi의 수정버튼
-		case "수정":
-			new ModifieUi();
-			System.out.println("ModifingUi 출력");
-			break;
-			
-		//OptionUi의 삭제버튼
-		case "삭제" :
-			new PlanEliminator().planEliminating();
-			System.out.println("삭제 실행");
-			break;
-			
-		//OptionUi의 알람방법 버튼
-		case "알람 방법 " :
-			System.out.println("AlamMethodUi 출력");
-			break;
-		
-		//AddingUi의 저장 버튼 
-		case "저장":
-			//new PlanAdder().add();
-			System.out.println("계획 저장");
-			superFrame.dispose();
-			System.out.println(superFrame.getTitle()+" 창 닫기");
-			break;
 		}
 	}
 	
