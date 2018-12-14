@@ -25,7 +25,7 @@ public class PlanManagement {
 		while(tempIt.hasNext())
 			System.out.println("알람시각 : "+tempIt.next());
 		stTime = (int)System.currentTimeMillis();
-		while((int)System.currentTimeMillis()-stTime<(1000*10)) {
+		while((int)System.currentTimeMillis()-stTime<(1000*7200)) {
 			System.out.println("지난 시간 : "+((int)System.currentTimeMillis()-stTime)/1000);
 			this.TimeMatching((int)System.currentTimeMillis()-stTime);
 			try {
@@ -43,7 +43,7 @@ public class PlanManagement {
 		while(it.hasNext()) {
 			int n = it.next();
 			time/=1000;
-			if(n*2-time==0) {
+			if(n*60-time==0) {
 				System.out.println("알람 이름 : "+plan.getAlarm().get(n));
 				new AlarmMethod(plan.getAlarm().get(n));
 				break;
