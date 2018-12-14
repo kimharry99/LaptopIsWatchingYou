@@ -12,7 +12,7 @@ public class MessageUi extends JFrame{
 			super.paintComponent(g);
 			g.setColor(Color.RED);
 			g.setFont(new Font("Arial",Font.BOLD,200));
-			g.drawString("Time's up!!!!!", 100, 100);
+			g.drawString("Time's up!!!!!", 200, 100);
 		}
 	}
 	
