@@ -42,10 +42,9 @@ public class ExecutionUi extends SuperUi {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				new PlanManagement(selectedFileName);
 				System.out.println(selectedFileName+" 계획 실행");
+				new PlanManagement(selectedFileName);
 			}
-			
 		});
 		getContentPane().add(Execution);
 	}

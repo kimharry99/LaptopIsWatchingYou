@@ -84,7 +84,7 @@ public class Plan {
 	/**
 	 * @return name : 계획이름을 리턴
 	 */
-	String getName() {
+	public String getName() {
 		return name;
 	}
 }

@@ -23,6 +23,7 @@ public class PlanLoader {
 		Plan plan = new Plan();
 		
 		public PlanLoader(String fileName) {
+			System.out.println("생성자 PlanLoader("+fileName+") 호출");
 			try {
 				fin = new FileReader("c:\\PrivateAlarm\\"+fileName);
 				char [] buf = new char[1024];
@@ -46,10 +47,14 @@ public class PlanLoader {
 		public void makePlan(String alarmList, String fileName) {
 			StringTokenizer st = new StringTokenizer(alarmList,",\n");
 			plan.rename(fileName);
+			System.out.println("계획 이름 설정 : "+fileName);
 			String token = st.nextToken();
 			token = st.nextToken();
+			System.out.println("계획이름"+token+"제거");
 			while(st.hasMoreTokens()) {
 				token = st.nextToken();
+				if(!st.hasMoreTokens())
+					break;
 				plan.addTimeSetting(Integer.valueOf(token));
 				token = st.nextToken();
 				plan.addAlarmMethod(token);

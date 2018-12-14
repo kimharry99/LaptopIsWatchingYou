@@ -8,7 +8,6 @@ import javax.swing.JFrame;
 
 import planAndFileManagement.PlanEliminator;
 import ui.AlarmMethodAddingUi;
-import ui.ModifieUi;
 import ui.PlanAddingUi;
 
 public class OptionUiButtonActionListener implements ActionListener{
@@ -24,13 +23,6 @@ public class OptionUiButtonActionListener implements ActionListener{
 					new PlanAddingUi();
 					System.out.println("AddingUi 출력");
 					break;
-					
-				//OptionUi의 수정버튼
-				case "수정":
-					new ModifieUi();
-					System.out.println("ModifingUi 출력");
-					break;
-
 					
 				//OptionUi의 알람방법 버튼
 				case "알람 방법" :

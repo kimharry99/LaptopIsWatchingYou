@@ -27,6 +27,7 @@ public class ReadExProcessList {
 	FileReader fin = null; 
 	
 	public ReadExProcessList() {
+		System.out.println("\n생성자 ReadExProcessList()호출");
 		try {
 			fin = new FileReader("c:\\PrivateAlarm\\ExProcessList.txt");
 			char [] buf = new char[1024];
@@ -57,24 +58,27 @@ public class ReadExProcessList {
 			vFilePath.add(token);
 			System.out.println("파일 경로 토큰 : "+token);
 		}
+		this.makeHashMap();
 	}
 	
 	public void makeHashMap() {
+		System.out.println("makeHashMap of ReadExProcessList");
 		Iterator<String>itFile = vFileList.iterator();
 		Iterator<String>itPath = vFilePath.iterator();
 		
 		while(itPath.hasNext()) {
-			FileAndPath.put(itFile.next(),itPath.next());
+			String tempFileName = itFile.next();
+			String tempFilePath= itPath.next();
+			System.out.println("hashMap에 등록 ("+tempFileName+", "+tempFilePath+")");
+			FileAndPath.put(tempFileName, tempFilePath);
 		}
 	}
 	
 	public Vector<String> getvFileList(){
-		System.out.println("vFileList의 크기"+vFileList.size());
 		return vFileList;
 	}
 	
 	public Vector<String> getvFilePath(){
-		System.out.println("vFilePath의 크기"+vFilePath.size());
 		return vFilePath;
 	}
 	
